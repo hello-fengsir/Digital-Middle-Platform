@@ -1,0 +1,3 @@
+TenSpur / TianCang public-source notice
+
+TianCang is the product-document management submodule of the TenSpur enterprise product catalog. No real product materials, production data, private IP/domain, or credentials are included. Bundled Mozilla PDF.js is licensed under Apache License 2.0; see tiancang/PDFJS-LICENSE.txt. TianCang-specific toolbar and deterministic-return behavior are maintained as narrow CSS/JS overlays; the upstream PDF.js core is not materially rewritten. Third-party product documents remain subject to their own rights and are not licensed by this repository.

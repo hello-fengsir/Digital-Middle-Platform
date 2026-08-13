@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PDF.js Viewer</title>
+  <style>
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f8fafc;color:#0f172a;margin:0;display:grid;place-items:center;min-height:100vh}.card{background:#fff;border:1px solid #e2e8f0;border-radius:20px;padding:32px;max-width:760px;box-shadow:0 20px 60px rgba(15,23,42,.12)}h1{margin:0 0 12px;font-size:32px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}a{display:inline-block;background:#e60013;color:#fff;text-decoration:none;border-radius:999px;padding:12px 18px;font-weight:800}.secondary{background:#0f172a}code{background:#f1f5f9;border-radius:8px;padding:2px 6px}p{line-height:1.7;color:#475569}
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>PDF.js Viewer</h1>
+    <p>PDF.js 独立查看器已部署。PDF 文件目录挂载在 NAS 共享：<code>/mnt/nas/共享/工作区/pdfjs-viewer/pdfs</code>。</p>
+    <p>把 PDF 放进该目录后，可用 <code>/web/viewer.html?file=/pdfs/文件名.pdf</code> 打开。</p>
+    <div class="actions">
+      <a href="/web/viewer.html">打开 PDF.js Viewer</a>
+      <a class="secondary" href="/pdfs/">查看 PDF 目录</a>
+    </div>
+  </main>
+</body>
+</html>

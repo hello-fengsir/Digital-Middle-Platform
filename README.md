@@ -427,3 +427,9 @@ AI 是可选能力。检查 Provider Base URL、模型名、网络连通性、�
 ## 许可证
 
 本项目代码以 [MIT License](LICENSE) 发布。MIT 许可不自动覆盖你自行导入的第三方数据、商标、产品资料、PDF、截图或其他内容；这些内容的授权责任由部署与运营方承担。
+
+## 天仓 TianCang 产品文档管理子模块
+
+`tiancang/` 是天枢 TenSpur 企业产品库的独立产品文档管理子模块，保留现有企业产品库定位与全部产品目录/对比/选型能力。它提供管理员 Cookie 认证、目录/PDF API、PDF 上传、新建目录、删除 PDF/空目录、匿名公开 PDF、内置 PDF.js 在线预览（缩放/旋转/浏览器返回）、移动端/PC 布局、路径越界防护和独立 Docker 健康检查。
+
+公开仓库不含真实产品材料或生产资料；命名卷 `tiancang-pdfs` 默认为空，测试只使用运行时临时虚构 PDF 并在结束后清理。Viewer 在 360/390 窄屏将工具栏优先分行，返回按钮触控区不小于 44px，缩放与旋转保持可见可操作。返回契约是确定性的：仅接受同源且路径严格为 `/` 的 `return` 参数或 referrer，否则回退 `/`，并通过 `location.assign()` 返回；不使用 `history.back()`，不允许开放重定向。部署前必须设置强随机 `TIANCANG_ADMIN_PASSWORD` 与 `TIANCANG_SESSION_SECRET`。第三方许可见 [`tiancang/LICENSES.md`](tiancang/LICENSES.md)。

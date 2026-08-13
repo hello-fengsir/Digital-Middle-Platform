@@ -387,3 +387,9 @@ ORM 实际业务表：`brands`、`product_types`、`series`、`models`、`model_
 - Alembic：文档表 `12` / 清单 `12`，0001–0012 线性链。
 - Compose：文档表 `3` / 清单 `3`。
 - 自动核对脚本：`tools/tenspur_source_inventory.py` 生成 JSON/MD；`tools/verify_handover_docs.py` 做集合覆盖与脱敏扫描。
+
+## 17. 天仓 TianCang 产品文档管理子模块
+
+`tiancang/` 是天枢 TenSpur 企业产品库的产品文档管理子模块，不改变企业产品库主定位。后端 `app.py` 提供 Cookie 管理员认证、`/api/files`、`/api/dirs`、上传/建目录/删除和匿名 `/public/pdfs/{path}`；`clean_rel`/`target` 共同阻断绝对路径、`..` 与解析后越界。`static/` 是管理界面，`pdfjs/` 是 Apache-2.0 的内置阅读器。`Dockerfile` 使用非 root 用户，Compose 命名卷 `tiancang-pdfs` 默认空。
+
+开发测试：`cd tiancang && pytest -q`。集成验收使用临时虚构 `%PDF-` 文件，覆盖 360、390、844、1024 与 PC 视口并检查 `documentElement.scrollWidth <= innerWidth`、控制台/页面错误、PDF.js 缩放/旋转/返回；测试后删除文件和空目录并确认默认卷 PDF=0。缩放采样必须等待 `currentScale` 到达目标或 canvas 尺寸变化；旋转采样必须等待 `pagesRotation === 90` 或 canvas 方向变化。Viewer 返回契约固定为：仅接受同源且 pathname 严格为 `/` 的 `return`/referrer，拒绝其余目标并回退 `/`，使用 `location.assign()`，禁止 `history.back()`。360/390 响应式修复只能放在天仓自有 CSS/JS 覆盖中，不得大改上游 PDF.js。不得把真实 PDF、运行卷、凭据、IP/域名或测试产物提交到 Git。

@@ -10,3 +10,5 @@
 | Production `.git`, `.env`, certs | Excluded |
 | DB/dumps/backups/input/import evidence | Excluded |
 | PDFs, media, screenshots, logos, built/dependency trees | Excluded |
+
+| TianCang product-document submodule | Source, tests, bundled PDF.js and generic Docker/Compose included; runtime PDF volume is empty; no real PDFs/data/endpoints/credentials included |

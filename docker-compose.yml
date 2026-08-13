@@ -22,4 +22,14 @@ services:
     build: ./frontend
     ports: ["8080:80"]
     depends_on: [api]
-volumes: {db-data: {}}
+  tiancang:
+    build: ./tiancang
+    environment:
+      TIANCANG_PDF_ROOT: /data/pdfs
+      TIANCANG_ADMIN_USERNAME: ${TIANCANG_ADMIN_USERNAME:-admin}
+      TIANCANG_ADMIN_PASSWORD: ${TIANCANG_ADMIN_PASSWORD:?set TIANCANG_ADMIN_PASSWORD}
+      TIANCANG_SESSION_SECRET: ${TIANCANG_SESSION_SECRET:?set TIANCANG_SESSION_SECRET}
+      TIANCANG_MAX_UPLOAD_BYTES: ${TIANCANG_MAX_UPLOAD_BYTES:-209715200}
+    ports: ["${TIANCANG_PORT:-8087}:8000"]
+    volumes: [tiancang-pdfs:/data/pdfs]
+volumes: {db-data: {}, tiancang-pdfs: {}}
