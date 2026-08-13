@@ -1,6 +1,6 @@
-# Digital Middle Platform · 硬件产品目录与选型中台
+# 天枢 TenSpur — 硬件产品资料与选型平台
 
-> 一个面向服务器、工作站、存储与 GPU 等硬件产品的全栈目录、规格治理和证据约束型选型平台。
+> 天枢 TenSpur 是一个面向服务器、工作站、存储与 GPU 等硬件产品的硬件产品资料与选型平台。
 >
 > **English summary:** A sanitized, self-hosted hardware catalog and selection platform with a public catalog, model comparison, authenticated administration, governed imports, GPU compatibility, and optional evidence-bounded AI assistance.
 
@@ -11,7 +11,7 @@
 
 ## 项目定位与适用场景
 
-Digital Middle Platform（源码内部分包名仍使用 Hardware Product Library / Product Hub）是一个可自托管的硬件产品数据中台。它将“对外可浏览的产品目录”和“对内受认证的数据维护后台”放在同一套数据模型与 API 之上，并提供字段字典、结构化导入、兼容关系和可选 AI 选型能力。
+天枢 TenSpur 是一个可自托管的硬件产品资料与选型平台。仓库名 `Digital-Middle-Platform` 以及源码内部 `hardware-product-library-*` 技术包名为兼容性保留标识，不作为用户可见产品名。它将“对外可浏览的产品目录”和“对内受认证的数据维护后台”放在同一套数据模型与 API 之上，并提供字段字典、结构化导入、兼容关系和可选 AI 选型能力。
 
 适合：
 

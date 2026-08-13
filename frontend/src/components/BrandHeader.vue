@@ -2,14 +2,14 @@
   <header class="header">
     <div class="header-inner">
       <div class="header-main">
-        <h1><span class="red">Product Hub</span> · {{ currentBrandName }} · {{ pageProductTitle }}</h1>
+        <h1><span class="red">天枢 TenSpur</span> · {{ currentBrandName }} · {{ pageProductTitle }}</h1>
         <div class="sub">
-          Product Hub · 企业数字仓库
+          硬件产品资料与选型平台
           <span class="summary-pill">{{ currentCount }} 款产品 · 实时读取</span>
         </div>
       </div>
       <div class="header-actions">
-        <div class="generic-logo text-brand" aria-label="Product Hub">PRODUCT HUB</div>
+        <div class="generic-logo text-brand" aria-label="天枢 TenSpur">TS</div>
         <div class="brand-switch" aria-label="品牌切换">
           <el-segmented :model-value="selectedBrand" :options="brandOptions" @update:model-value="updateBrand" />
         </div>

@@ -2,10 +2,10 @@
   <div class="admin-shell">
     <header class="admin-topbar">
       <div class="admin-brand">
-        <div class="admin-brand-mark text-brand" aria-label="Product Hub">PH</div>
+        <div class="admin-brand-mark text-brand" aria-label="天枢 TenSpur">TS</div>
         <div class="admin-brand-copy">
-          <p class="admin-kicker">Hardware Product Library</p>
-          <h1>轻量产品管理</h1>
+          <p class="admin-kicker">天枢 TenSpur</p>
+          <h1>硬件产品资料与选型平台</h1>
           <p class="admin-subtitle">产品型号、基础信息、规格参数与模板导入统一维护</p>
         </div>
       </div>
@@ -23,7 +23,7 @@
     <section v-if="!isLoggedIn" class="login-wrap">
       <div class="login-visual">
         <p class="admin-kicker">Secure Console</p>
-        <h2>Product Hub 后台</h2>
+        <h2>天枢 TenSpur 后台</h2>
         <p>沿用前台产品库的红蓝视觉系统，管理操作保持聚焦、清晰、可追踪。</p>
       </div>
       <section class="editor-panel login-panel">

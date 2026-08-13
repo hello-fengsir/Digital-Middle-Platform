@@ -1,7 +1,6 @@
-Author:          python-docx
-Creator:         Writer
-Producer:        LibreOffice 7.3
-CreationDate:    Thu Aug 13 08:55:18 2026 UTC
+Title:           天枢 TenSpur 开发指南
+Producer:        LibreOffice 7.4
+CreationDate:    Thu Aug 13 18:29:37 2026 CST
 Custom Metadata: no
 Metadata Stream: no
 Tagged:          no
@@ -9,10 +8,10 @@ UserProperties:  no
 Suspects:        no
 Form:            none
 JavaScript:      no
-Pages:           6
+Pages:           27
 Encrypted:       no
 Page size:       595.304 x 841.89 pts (A4)
 Page rot:        0
-File size:       288637 bytes
+File size:       353197 bytes
 Optimized:       no
 PDF version:     1.6

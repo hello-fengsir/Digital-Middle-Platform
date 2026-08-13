@@ -1,4 +1,4 @@
-# Product Hub public 源码机器清单
+# 天枢 TenSpur public 源码机器清单
 
 - 扫描根：`tenspur-public-release-final-work-20260813/`（不记录绝对部署路径）
 - 统计：`{"source_files": 112, "python_files": 39, "ts_files": 25, "vue_files": 18, "routes": 42, "components": 18, "migrations": 12, "compose_services": 3}`

@@ -1,1 +1,1 @@
-"""Route modules for the Hardware Product Library API."""
+"""Route modules for the TenSpur API."""

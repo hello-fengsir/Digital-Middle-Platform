@@ -1,7 +1,7 @@
 {
   "status": "PASS",
-  "files_scanned": 110,
-  "bytes_scanned": 732240,
+  "files_scanned": 120,
+  "bytes_scanned": 903515,
   "forbidden_files": [],
   "sensitive_hits": {
     "private_ip": 0,

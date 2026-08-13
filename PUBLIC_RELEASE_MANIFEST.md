@@ -1,4 +1,6 @@
-# Public Release Scope
+# 天枢 TenSpur 公开发布范围
+
+天枢 TenSpur — 硬件产品资料与选型平台。
 
 | Live area | Public treatment |
 |---|---|

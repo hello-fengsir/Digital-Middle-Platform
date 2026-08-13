@@ -52,7 +52,7 @@
 
   <AiAssistant :brand-code="selectedBrand" :force-close="isMobileViewport && (compareOpen || mobileOverlayOpen)" @jump-model="jumpToModel" @open-change="onAiOpenChange" />
 
-  <footer class="footer">Product Hub · 产品资料与选型平台，页面实时读取已结构化的产品规格。</footer>
+  <footer class="footer">天枢 TenSpur · 硬件产品资料与选型平台，页面实时读取已结构化的产品规格。</footer>
 </template>
 
 <script setup lang="ts">

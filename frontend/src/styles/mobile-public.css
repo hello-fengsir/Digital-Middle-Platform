@@ -1,4 +1,4 @@
-/* Product Hub public mobile-only layer. Desktop >=1025px is intentionally untouched. */
+/* TenSpur public mobile-only layer. Desktop >=1025px is intentionally untouched. */
 .mobile-context-bar, .mobile-spec-group-title, .gpu-return-source { display: none; }
 @media (max-width: 1024px) {
   :root { --m-safe-top: env(safe-area-inset-top, 0px); --m-safe-bottom: env(safe-area-inset-bottom, 0px); --m-dock: 64px; }

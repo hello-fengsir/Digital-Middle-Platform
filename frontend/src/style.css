@@ -85,7 +85,7 @@ a { color: var(--blue); }
   font-weight: 950;
 }
 .header h1:before {
-  content: "PRODUCT HUB PRODUCT HUB";
+  content: "TENSPUR · 天枢";
   display: block;
   color: #8dd7ff;
   font-size: 12px;

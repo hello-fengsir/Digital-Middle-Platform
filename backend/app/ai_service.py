@@ -159,7 +159,7 @@ def _chat_completion(base_url: str, api_key: str, model: str, messages: list[dic
 
 def test_ai_config(db: Session, payload) -> dict:
     base_url, api_key, model, temperature, max_tokens, _enabled = _effective_ai(db, payload)
-    text = _chat_completion(base_url, api_key, model, [{"role": "user", "content": "回复：Product Hub AI OK"}], temperature, min(max_tokens, 64))
+    text = _chat_completion(base_url, api_key, model, [{"role": "user", "content": "回复：天枢 TenSpur AI OK"}], temperature, min(max_tokens, 64))
     return {"ok": True, "message": text[:200]}
 
 

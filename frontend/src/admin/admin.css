@@ -988,7 +988,7 @@ button.mini { padding: 6px 10px; min-height: auto; font-size: 12px; }
 .gpu-dirty-hint { color:#b45309; font-weight:900; }
 @media (max-width: 720px) { .compatible-gpu-select { grid-template-columns:1fr; max-height:260px; } .compatible-gpu-actions { align-items:stretch; flex-direction:column; } .compatible-gpu-actions button { width:100%; } }
 
-/* === Product Hub admin mobile P0/P1: single authoritative mobile zone === */
+/* === TenSpur admin mobile P0/P1: single authoritative mobile zone === */
 .navigator-toggle,
 .navigator-current,
 .recognition-mobile-label,
