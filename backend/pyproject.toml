@@ -1,0 +1,25 @@
+[project]
+name = "hardware-product-library-api"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+  "alembic==1.13.2",
+  "beautifulsoup4==4.12.3",
+  "fastapi==0.111.1",
+  "psycopg[binary]==3.2.1",
+  "pydantic==2.8.2",
+  "pydantic-settings==2.4.0",
+  "sqlalchemy==2.0.31",
+  "uvicorn[standard]==0.30.3",
+  "openpyxl==3.1.5"
+]
+
+[project.optional-dependencies]
+test = [
+  "httpx==0.27.0",
+  "pytest==8.3.2"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

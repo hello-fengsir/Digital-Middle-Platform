@@ -1,0 +1,5 @@
+.inline-actions.series-actions { display: flex; align-items: center; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+.dictionary-freeze-notice { display: flex; flex-wrap: wrap; gap: 6px 12px; margin-bottom: 14px; padding: 12px 14px; color: #244363; background: #edf6ff; border: 1px solid #b8d7f2; border-radius: 10px; font-size: 13px; }
+.dictionary-freeze-notice b { color: #14558d; }
+.checkbox-line { display: inline-flex; align-items: center; gap: 7px; min-height: 38px; }
+.checkbox-line input { width: 16px; height: 16px; }

@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "files_scanned": 110,
+  "bytes_scanned": 732240,
+  "forbidden_files": [],
+  "sensitive_hits": {
+    "private_ip": 0,
+    "private_key": 0,
+    "operator_identity": 0,
+    "credential_literal": 0
+  },
+  "sensitive_hit_files": {
+    "private_ip": [],
+    "private_key": [],
+    "operator_identity": [],
+    "credential_literal": []
+  }
+}
