@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "source_files": 112,
+    "python_files": 39,
+    "ts_files": 25,
+    "vue_files": 18,
+    "routes": 42,
+    "components": 18,
+    "migrations": 12,
+    "compose_services": 3
+  },
+  "document_lines": 390,
+  "coverage": {
+    "routes": {
+      "expected": 42,
+      "missing": 0,
+      "missing_items": []
+    },
+    "components": {
+      "expected": 18,
+      "missing": 0,
+      "missing_items": []
+    },
+    "migrations": {
+      "expected": 12,
+      "missing": 0,
+      "missing_items": []
+    },
+    "files": {
+      "expected": 112,
+      "missing": 0,
+      "missing_items": []
+    }
+  },
+  "forbidden": []
+}

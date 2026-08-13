@@ -1,0 +1,1975 @@
+{
+  "label": "Product Hub public",
+  "root_display": "tenspur-public-release-final-work-20260813",
+  "files": [
+    "CHANGELOG.md",
+    "DEPLOYMENT.md",
+    "HANDOVER.md",
+    "PRIVACY.md",
+    "PUBLIC_RELEASE_MANIFEST.md",
+    "README.md",
+    "SECURITY.md",
+    "SENSITIVE_SCAN.json",
+    "backend/Dockerfile",
+    "backend/alembic.ini",
+    "backend/alembic/env.py",
+    "backend/alembic/versions/0001_initial_schema.py",
+    "backend/alembic/versions/0002_cpu_compatibility.py",
+    "backend/alembic/versions/0003_gpu_slot_cooling.py",
+    "backend/alembic/versions/0004_ai_config_compatible_gpu.py",
+    "backend/alembic/versions/0005_gpu_relation_constraints_acceptance_cleanup.py",
+    "backend/alembic/versions/0006_gpu_parent_guard_import_trim_whitepaper.py",
+    "backend/alembic/versions/0007_nf5468a7_cross_platform_cleanup.py",
+    "backend/alembic/versions/0008_nf5468a7_cn_cpu_notes_cleanup.py",
+    "backend/alembic/versions/0009_controlled_lifecycle_tags.py",
+    "backend/alembic/versions/0010_field_dictionary_guard.py",
+    "backend/alembic/versions/0011_merge_auto_field_definitions.py",
+    "backend/alembic/versions/0012_normalize_interface_fields.py",
+    "backend/app/__init__.py",
+    "backend/app/ai_agent_rule.py",
+    "backend/app/ai_service.py",
+    "backend/app/catalog.py",
+    "backend/app/config.py",
+    "backend/app/db.py",
+    "backend/app/importer.py",
+    "backend/app/main.py",
+    "backend/app/model_matching.py",
+    "backend/app/models.py",
+    "backend/app/routes/__init__.py",
+    "backend/app/routes/admin.py",
+    "backend/app/routes/public.py",
+    "backend/app/schemas.py",
+    "backend/app/security.py",
+    "backend/entrypoint.sh",
+    "backend/pyproject.toml",
+    "backend/tests/test_ai_agent_rule.py",
+    "backend/tests/test_ai_input_contract.py",
+    "backend/tests/test_ai_numeric_constraints.py",
+    "backend/tests/test_api.py",
+    "backend/tests/test_field_dictionary_governance.py",
+    "backend/tests/test_gpu_constraints_cleanup.py",
+    "backend/tests/test_lifecycle_migration_contract.py",
+    "backend/tests/test_public_schema_only_migrations.py",
+    "backend/tests/test_validation_error_redaction.py",
+    "docker-compose.yml",
+    "docs/DEVELOPER_GUIDE.md",
+    "docs/SOURCE_INVENTORY.json",
+    "docs/SOURCE_INVENTORY.md",
+    "frontend/Dockerfile",
+    "frontend/index.html",
+    "frontend/nginx.conf",
+    "frontend/package-lock.json",
+    "frontend/package.json",
+    "frontend/src/App.vue",
+    "frontend/src/admin/AdminApp.test.ts",
+    "frontend/src/admin/AdminApp.vue",
+    "frontend/src/admin/admin-components.css",
+    "frontend/src/admin/admin.css",
+    "frontend/src/admin/adminAiAgentRuleApi.test.ts",
+    "frontend/src/admin/adminApi.test.ts",
+    "frontend/src/admin/adminApi.ts",
+    "frontend/src/admin/components/AdminAiAgentRulePanel.test.ts",
+    "frontend/src/admin/components/AdminAiAgentRulePanel.vue",
+    "frontend/src/admin/components/AdminAiConfigPanel.test.ts",
+    "frontend/src/admin/components/AdminAiConfigPanel.vue",
+    "frontend/src/admin/components/AdminBasicForm.vue",
+    "frontend/src/admin/components/AdminCompatibleGpuPanel.test.ts",
+    "frontend/src/admin/components/AdminCompatibleGpuPanel.vue",
+    "frontend/src/admin/components/AdminImportPanel.test.ts",
+    "frontend/src/admin/components/AdminImportPanel.vue",
+    "frontend/src/admin/components/AdminModelList.vue",
+    "frontend/src/admin/components/AdminRecognitionPanel.vue",
+    "frontend/src/admin/components/AdminSpecEditor.vue",
+    "frontend/src/admin/components/SeriesSelector.vue",
+    "frontend/src/admin/components/SpecRows.vue",
+    "frontend/src/api.ts",
+    "frontend/src/components/AiAssistant.vue",
+    "frontend/src/components/BrandHeader.vue",
+    "frontend/src/components/ModelDetail.vue",
+    "frontend/src/components/ModelNavigator.vue",
+    "frontend/src/components/ProductBadges.vue",
+    "frontend/src/components/ProductCompare.vue",
+    "frontend/src/env.d.ts",
+    "frontend/src/main.ts",
+    "frontend/src/style.css",
+    "frontend/src/styles/compare.css",
+    "frontend/src/styles/mobile-public.css",
+    "frontend/src/styles/mobile-scroll-admin.css",
+    "frontend/src/utils/adminRedirect.test.ts",
+    "frontend/src/utils/adminRedirect.ts",
+    "frontend/src/utils/aiRecommendation.test.ts",
+    "frontend/src/utils/aiRecommendation.ts",
+    "frontend/src/utils/catalogLoader.test.ts",
+    "frontend/src/utils/catalogLoader.ts",
+    "frontend/src/utils/displayRules.ts",
+    "frontend/src/utils/gpuDisplay.test.ts",
+    "frontend/src/utils/gpuDisplay.ts",
+    "frontend/src/utils/homeUx.test.ts",
+    "frontend/src/utils/productBadges.test.ts",
+    "frontend/src/utils/productBadges.ts",
+    "frontend/tests/api-error.test.ts",
+    "frontend/tests/gpu-display-browser.mjs",
+    "frontend/tests/gpu-save-browser.mjs",
+    "frontend/tsconfig.json",
+    "frontend/vite.config.ts",
+    "tools/tenspur_source_inventory.py",
+    "tools/verify_handover_docs.py"
+  ],
+  "counts": {
+    ".md": 9,
+    ".json": 5,
+    "Dockerfile": 2,
+    ".ini": 1,
+    ".py": 39,
+    ".sh": 1,
+    ".toml": 1,
+    ".yml": 1,
+    ".html": 1,
+    ".conf": 1,
+    ".vue": 18,
+    ".ts": 25,
+    ".css": 6,
+    ".mjs": 2
+  },
+  "dependencies": {
+    "backend/pyproject.toml": {
+      "requires_python": ">=3.12",
+      "dependencies": [
+        "alembic==1.13.2",
+        "beautifulsoup4==4.12.3",
+        "fastapi==0.111.1",
+        "psycopg[binary]==3.2.1",
+        "pydantic==2.8.2",
+        "pydantic-settings==2.4.0",
+        "sqlalchemy==2.0.31",
+        "uvicorn[standard]==0.30.3",
+        "openpyxl==3.1.5"
+      ],
+      "optional_dependencies": {
+        "test": [
+          "httpx==0.27.0",
+          "pytest==8.3.2"
+        ]
+      }
+    },
+    "frontend/package.json": {
+      "name": "hardware-product-library-web",
+      "version": "0.1.0",
+      "dependencies": {
+        "@vitejs/plugin-vue": "5.1.2",
+        "element-plus": "2.7.8",
+        "typescript": "5.5.4",
+        "vite": "5.4.2",
+        "vue": "3.4.38",
+        "vue-tsc": "2.0.29"
+      },
+      "devDependencies": {
+        "@playwright/test": "^1.61.1",
+        "@vue/test-utils": "^2.4.11",
+        "happy-dom": "^15.11.7",
+        "vitest": "^2.1.9"
+      },
+      "scripts": {
+        "dev": "vite --host 0.0.0.0",
+        "build": "vue-tsc -b && vite build",
+        "test": "vitest run",
+        "preview": "vite preview --host 0.0.0.0"
+      }
+    }
+  },
+  "python_modules": [
+    {
+      "file": "backend/alembic/env.py",
+      "lines": 37,
+      "classes": [],
+      "functions": [
+        "run_migrations_offline",
+        "run_migrations_online"
+      ]
+    },
+    {
+      "file": "backend/alembic/versions/0001_initial_schema.py",
+      "lines": 74,
+      "classes": [],
+      "functions": [
+        "timestamps",
+        "lifecycle",
+        "upgrade",
+        "downgrade"
+      ]
+    },
+    {
+      "file": "backend/alembic/versions/0002_cpu_compatibility.py",
+      "lines": 51,
+      "classes": [],
+      "functions": [
+        "timestamps",
+        "upgrade",
+        "downgrade"
+      ]
+    },
+    {
+      "file": "backend/alembic/versions/0003_gpu_slot_cooling.py",
+      "lines": 32,
+      "classes": [],
+      "functions": [
+        "upgrade",
+        "downgrade"
+      ]
+    },
+    {
+      "file": "backend/alembic/versions/0004_ai_config_compatible_gpu.py",
+      "lines": 51,
+      "classes": [],
+      "functions": [
+        "upgrade",
+        "downgrade"
+      ]
+    },
+    {
+      "file": "backend/alembic/versions/0005_gpu_relation_constraints_acceptance_cleanup.py",
+      "lines": 93,
+      "classes": [],
+      "functions": [
+        "upgrade",
+        "downgrade"
+      ]
+    },
+    {
+      "file": "backend/alembic/versions/0006_gpu_parent_guard_import_trim_whitepaper.py",
+      "lines": 16,
+      "classes": [],
+      "functions": [
+        "upgrade",
+        "downgrade"
+      ]
+    },
+    {
+      "file": "backend/alembic/versions/0007_nf5468a7_cross_platform_cleanup.py",
+      "lines": 16,
+      "classes": [],
+      "functions": [
+        "upgrade",
+        "downgrade"
+      ]
+    },
+    {
+      "file": "backend/alembic/versions/0008_nf5468a7_cn_cpu_notes_cleanup.py",
+      "lines": 16,
+      "classes": [],
+      "functions": [
+        "upgrade",
+        "downgrade"
+      ]
+    },
+    {
+      "file": "backend/alembic/versions/0009_controlled_lifecycle_tags.py",
+      "lines": 46,
+      "classes": [],
+      "functions": [
+        "upgrade",
+        "downgrade"
+      ]
+    },
+    {
+      "file": "backend/alembic/versions/0010_field_dictionary_guard.py",
+      "lines": 44,
+      "classes": [],
+      "functions": [
+        "enable_dictionary_migration_guard",
+        "upgrade",
+        "downgrade"
+      ]
+    },
+    {
+      "file": "backend/alembic/versions/0011_merge_auto_field_definitions.py",
+      "lines": 18,
+      "classes": [],
+      "functions": [
+        "upgrade",
+        "downgrade"
+      ]
+    },
+    {
+      "file": "backend/alembic/versions/0012_normalize_interface_fields.py",
+      "lines": 18,
+      "classes": [],
+      "functions": [
+        "upgrade",
+        "downgrade"
+      ]
+    },
+    {
+      "file": "backend/app/__init__.py",
+      "lines": 2,
+      "classes": [],
+      "functions": []
+    },
+    {
+      "file": "backend/app/ai_agent_rule.py",
+      "lines": 224,
+      "classes": [
+        "RuleFileState",
+        "FileOwnership",
+        "AiAgentRuleSnapshot"
+      ],
+      "functions": [
+        "_rule_path",
+        "_backup_path",
+        "_metadata",
+        "get_ai_agent_rule",
+        "_fsync_directory",
+        "_file_state",
+        "_ownership_for_target",
+        "_apply_temp_ownership",
+        "snapshot_ai_agent_rule_files",
+        "_atomic_restore_file",
+        "restore_ai_agent_rule_files",
+        "save_ai_agent_rule",
+        "provider_system_messages"
+      ]
+    },
+    {
+      "file": "backend/app/ai_service.py",
+      "lines": 822,
+      "classes": [],
+      "functions": [
+        "_xor_secret",
+        "_xor_unsecret",
+        "_get_config",
+        "get_ai_config_public",
+        "save_ai_config",
+        "delete_ai_provider_api_key",
+        "_effective_ai",
+        "_chat_completion",
+        "test_ai_config",
+        "_contains_alias",
+        "_model_name_match_strength",
+        "_explicit_brands",
+        "_explicit_types",
+        "_clip",
+        "_condition",
+        "_negative_clauses",
+        "_mask_negative_clauses",
+        "_pcie_tuple",
+        "_extract_hard_conditions",
+        "_unparsed_conditions",
+        "_spec_text",
+        "_usable",
+        "_memory_spec",
+        "_memory_capacities_gb",
+        "_slot_counts",
+        "_gpu_model_evidence",
+        "_gpu_count_spec",
+        "_gpu_count_from_support_spec",
+        "_dual_socket_spec",
+        "_interface_spec",
+        "_explicit_absence_evidence",
+        "_evaluate_condition",
+        "_requested_type_by_brand",
+        "_candidate_rows",
+        "_match_status",
+        "_structured_answer",
+        "_candidate_models",
+        "recommend_models"
+      ]
+    },
+    {
+      "file": "backend/app/catalog.py",
+      "lines": 784,
+      "classes": [],
+      "functions": [
+        "resolve_existing_brand",
+        "resolve_existing_product_type",
+        "resolve_existing_series",
+        "replace_business_tags",
+        "business_tags_for_model",
+        "badges_for_model",
+        "normalize_product_type",
+        "stable_raw_field_key",
+        "map_field",
+        "_normalize_match_text",
+        "_extract_spec_pairs",
+        "_build_spec_match_index",
+        "_match_spec_label",
+        "_ai_spec_recognition",
+        "preview_spec_recognition",
+        "seed_spec_template",
+        "get_or_create_brand",
+        "get_or_create_product_type",
+        "get_or_create_series",
+        "resolve_existing_spec_definitions",
+        "write_spec_values",
+        "upsert_model",
+        "create_model_with_existing_catalog",
+        "patch_model",
+        "soft_delete_model",
+        "replace_model_specs",
+        "active_models_query",
+        "model_to_summary",
+        "_gpu_memory_for_model",
+        "compatible_gpu_to_dict",
+        "compatible_gpus_for_model",
+        "list_gpu_accessory_models",
+        "replace_compatible_gpus_atomic",
+        "replace_compatible_gpus",
+        "specs_for_model",
+        "spec_definitions_query",
+        "spec_definition_to_dict",
+        "spec_groups_with_fields",
+        "update_spec_definition"
+      ]
+    },
+    {
+      "file": "backend/app/config.py",
+      "lines": 24,
+      "classes": [
+        "Settings"
+      ],
+      "functions": []
+    },
+    {
+      "file": "backend/app/db.py",
+      "lines": 23,
+      "classes": [
+        "Base"
+      ],
+      "functions": [
+        "get_db"
+      ]
+    },
+    {
+      "file": "backend/app/importer.py",
+      "lines": 525,
+      "classes": [],
+      "functions": [
+        "normalize_import_brand",
+        "cell_text",
+        "build_import_template",
+        "parse_import_workbook",
+        "_strip_markdown_bullet",
+        "_split_markdown_key_value",
+        "_markdown_section_title",
+        "_markdown_model_title",
+        "parse_markdown_import",
+        "text_of",
+        "clean_value",
+        "series_from_model",
+        "normalize_lenovo_model_text",
+        "matches_lenovo_model",
+        "lenovo_series_from_model",
+        "parse_card",
+        "import_cpu_compatibility",
+        "import_html",
+        "main"
+      ]
+    },
+    {
+      "file": "backend/app/main.py",
+      "lines": 53,
+      "classes": [],
+      "functions": [
+        "_redact_validation_errors",
+        "request_validation_exception_handler",
+        "create_app"
+      ]
+    },
+    {
+      "file": "backend/app/model_matching.py",
+      "lines": 86,
+      "classes": [],
+      "functions": [
+        "normalized_tokens",
+        "_gpu_alias",
+        "_query_sequences",
+        "model_name_match_rank",
+        "positive_model_text_match",
+        "rank_model_rows"
+      ]
+    },
+    {
+      "file": "backend/app/models.py",
+      "lines": 174,
+      "classes": [
+        "TimestampMixin",
+        "Brand",
+        "ProductType",
+        "Series",
+        "Model",
+        "ModelBusinessTag",
+        "SpecGroup",
+        "SpecDefinition",
+        "ModelSpecValue",
+        "ModelCompatibleGpu",
+        "AiProviderConfig",
+        "CpuCompatibility",
+        "ApiClient",
+        "AuditLog"
+      ],
+      "functions": []
+    },
+    {
+      "file": "backend/app/schemas.py",
+      "lines": 397,
+      "classes": [
+        "ApiSchema",
+        "BrandOut",
+        "ProductTypeOut",
+        "SeriesOut",
+        "ModelBadge",
+        "ModelSummary",
+        "CompatibleGpuOut",
+        "SpecValueOut",
+        "SpecFieldOut",
+        "SpecGroupOut",
+        "SpecDefinitionOut",
+        "SpecDefinitionPatch",
+        "ModelDetail",
+        "SpecInput",
+        "ModelWrite",
+        "CompatibleGpuWrite",
+        "ModelPatch",
+        "ImportPreviewRow",
+        "ImportPreviewSpecRow",
+        "MarkdownImportIn",
+        "ImportPreviewOut",
+        "SpecRecognitionPreviewIn",
+        "SpecRecognitionPreviewItem",
+        "SpecRecognitionPreviewOut",
+        "HealthOut",
+        "AdminLoginIn",
+        "AdminSessionOut",
+        "AdminMeOut",
+        "AiConfigOut",
+        "AiConfigIn",
+        "AiConfigTestIn",
+        "AiAgentRuleIn",
+        "AiAgentRuleOut",
+        "AiRecommendIn",
+        "AiHardCondition",
+        "AiConditionResult",
+        "AiBrandCoverage",
+        "AiCoverage",
+        "AiRecommendModel",
+        "AiRecommendOut"
+      ],
+      "functions": []
+    },
+    {
+      "file": "backend/app/security.py",
+      "lines": 97,
+      "classes": [],
+      "functions": [
+        "hash_api_key",
+        "_b64url_encode",
+        "_b64url_decode",
+        "verify_admin_password",
+        "create_admin_session_token",
+        "parse_admin_session_token",
+        "format_expires_at",
+        "require_admin_session",
+        "ensure_default_api_client",
+        "require_api_client"
+      ]
+    },
+    {
+      "file": "backend/app/routes/__init__.py",
+      "lines": 2,
+      "classes": [],
+      "functions": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "lines": 417,
+      "classes": [],
+      "functions": [
+        "admin_login",
+        "admin_nginx_auth",
+        "admin_me",
+        "admin_logout",
+        "admin_spec_groups",
+        "admin_spec_definitions",
+        "admin_patch_spec_definition",
+        "admin_delete_series",
+        "admin_models",
+        "_model_detail_data",
+        "admin_model_detail",
+        "admin_spec_recognition_preview",
+        "_validate_import_field_keys",
+        "_import_preview_response",
+        "_run_import_payloads",
+        "admin_import_template",
+        "admin_import_preview",
+        "admin_import_run",
+        "admin_markdown_import_preview",
+        "admin_markdown_import_run",
+        "admin_create",
+        "admin_patch",
+        "admin_replace_compatible_gpus",
+        "admin_delete",
+        "admin_put_specs",
+        "admin_upsert",
+        "admin_gpu_options",
+        "admin_ai_config",
+        "admin_put_ai_config",
+        "admin_delete_ai_config_api_key",
+        "admin_test_ai_config",
+        "admin_ai_agent_rule",
+        "admin_put_ai_agent_rule"
+      ]
+    },
+    {
+      "file": "backend/app/routes/public.py",
+      "lines": 301,
+      "classes": [],
+      "functions": [
+        "health",
+        "brands",
+        "product_types",
+        "spec_definitions",
+        "series",
+        "_keyword_terms",
+        "_normalized_search_token",
+        "_model_like_term",
+        "_search_rank",
+        "_positive_spec_match",
+        "enrich_gpu_display_fields",
+        "_exact_model_rows",
+        "models",
+        "model_detail",
+        "model_specifications",
+        "search",
+        "cpu_compatibility_summary",
+        "cpu_compatibility",
+        "ai_recommend"
+      ]
+    },
+    {
+      "file": "backend/tests/test_ai_agent_rule.py",
+      "lines": 303,
+      "classes": [
+        "_CommitFailureDb"
+      ],
+      "functions": [
+        "_headers",
+        "rule_dir",
+        "test_admin_rule_requires_auth_and_reads_runtime",
+        "test_admin_rule_rejects_invalid_or_path_fields",
+        "test_put_is_immediately_visible_to_provider_and_audit_omits_full_text",
+        "test_missing_or_unreadable_rule_falls_back",
+        "test_atomic_replace_failure_keeps_original",
+        "test_bind_directory_persistence_contract",
+        "test_provider_cannot_create_candidates_or_bypass_no_evidence_refusal",
+        "_file_meta",
+        "test_save_preserves_existing_main_and_backup_metadata",
+        "test_new_main_and_backup_use_directory_owner_and_0644",
+        "test_snapshot_restore_preserves_three_exact_pre_states",
+        "test_admin_commit_failure_restores_exact_md_and_backup",
+        "test_compensation_failure_logs_no_md_and_reraises_original"
+      ]
+    },
+    {
+      "file": "backend/tests/test_ai_input_contract.py",
+      "lines": 14,
+      "classes": [],
+      "functions": [
+        "test_ai_recommend_input_limit_is_2000"
+      ]
+    },
+    {
+      "file": "backend/tests/test_ai_numeric_constraints.py",
+      "lines": 602,
+      "classes": [],
+      "functions": [
+        "_seed",
+        "setup_module",
+        "_recommend",
+        "test_parser_extracts_numeric_power_and_gpu_hard_conditions",
+        "test_matched_requires_same_model_local_evidence_for_every_condition",
+        "test_extreme_numeric_requirement_cannot_be_matched_by_brand_or_type_only",
+        "test_unknown_marker_is_not_local_capacity_evidence",
+        "test_cross_brand_missing_dimension_is_structured_and_visible",
+        "test_memory_request_parser_does_not_take_unrelated_or_bandwidth_numbers",
+        "test_memory_evidence_is_scoped_plausible_and_normalized_to_gb",
+        "test_gpu_model_word_orders_and_chinese_connectors",
+        "test_gpu_count_never_comes_from_pcie_or_disk_numbers",
+        "test_pcie_bus_descriptor_never_pollutes_gpu_model_or_count",
+        "test_server_and_gpu_pcie_interface_scope_accepts_original_spellings",
+        "test_server_pcie_interface_uses_strict_motherboard_expansion_allowlist",
+        "test_named_server_pcie_regressions_reject_ts860_network_and_keep_slot_fields",
+        "test_gpu_model_matching_uses_complete_normalized_token",
+        "test_prefixed_gpu_bare_aliases_are_exact_token_sequences_only",
+        "test_public_models_search_and_ai_share_exact_gpu_identity_contract",
+        "test_dual_socket_evidence_field_allowlist_positive_and_negative",
+        "test_structured_negative_cpu_and_gpu_remove_conflicting_candidates",
+        "test_original_negative_phrases_are_structured_without_false_match",
+        "test_unparsed_negative_never_uses_opposite_condition_to_create_candidates",
+        "test_bare_prefixed_gpu_models_are_deterministically_retrieved",
+        "test_deterministic_non_numeric_queries_are_bounded_and_never_brand_fallback",
+        "test_gpu_count_evidence_requires_whole_machine_support_field_and_semantics",
+        "test_gpu_count_width_is_parsed_and_evidence_is_width_scoped",
+        "test_real_gpu_width_requirement_rejects_sr665_and_matches_nf5270m7",
+        "test_exclusion_unknown_cannot_match_and_confirmed_absence_can",
+        "test_unspecified_gpu_width_uses_max_compatible_option_not_sum",
+        "test_compatibility_proves_gpu_model_only_and_false_count_cannot_create_partial",
+        "test_gpu_accessories_are_never_server_requirement_candidates",
+        "test_server_feature_plus_gpu_implicitly_scopes_candidates_to_servers",
+        "test_pure_l40s_accessory_query_remains_available",
+        "test_bare_l40s_is_catalog_match_not_hard_condition_match",
+        "test_pcie_interface_capability_is_retrieved_without_fake_gpu_count",
+        "test_cross_brand_typed_gpu_expansion_has_per_brand_coverage",
+        "test_excluded_configuration_prevents_matched",
+        "test_unparsed_negative_clause_blocks_matched",
+        "test_unparsed_hot_swap_fan_and_ipmi_requirements_gate_all_candidates",
+        "test_nf5280_m7_complete_separator_variants_and_prefix_negative",
+        "test_partial_candidates_have_at_least_one_hard_hit_and_coverage_always_exists",
+        "test_no_named_brand_candidate_keeps_uncovered_slot",
+        "test_public_warning_redacts_provider_detail",
+        "test_chat_completion_timeout_is_bounded_and_http_body_is_redacted"
+      ]
+    },
+    {
+      "file": "backend/tests/test_api.py",
+      "lines": 871,
+      "classes": [],
+      "functions": [
+        "setup_module",
+        "auth",
+        "admin_token",
+        "write_auth",
+        "test_public_queries",
+        "test_public_exact_model_search_ranks_exact_first_and_excludes_negative_notes",
+        "test_model_detail_filters_blank_spec_values",
+        "test_api_key_negative",
+        "test_delete_ai_provider_api_key_requires_admin_bearer",
+        "test_delete_ai_provider_api_key_is_atomic_idempotent_and_secret_free",
+        "test_delete_ai_provider_api_key_commit_failure_rolls_back",
+        "test_existing_empty_ai_config_never_falls_back_to_environment_and_test_fails",
+        "test_missing_ai_config_is_seeded_once_from_environment",
+        "test_login_only_write_allowed",
+        "test_admin_auth_endpoints",
+        "test_create_patch_delete_and_specs",
+        "test_upsert",
+        "test_excel_import_template_preview_and_run",
+        "test_admin_spec_dictionary_is_runtime_locked",
+        "test_new_spec_definition_is_rejected",
+        "test_admin_create_rejects_unknown_brand_and_type_but_allows_new_series",
+        "test_admin_create_is_immediately_queryable",
+        "test_admin_patch_existing_model_can_only_switch_to_active_existing_series",
+        "test_admin_series_delete_empty_204_bound_409",
+        "test_normalized_series_name_uniqueness_reuses_existing_series",
+        "test_public_models_keyword_matches_spec_values_and_definitions",
+        "test_admin_spec_recognition_preview",
+        "test_ai_recommend_dual_socket_has_local_evidence",
+        "test_ai_recommend_with_evidence_calls_provider",
+        "test_ai_recommend_no_match_still_calls_provider_with_bounded_refusal",
+        "test_ai_recommend_unparsed_calls_provider_without_requirement_details",
+        "test_ai_recommend_provider_timeout_and_error_fall_back_to_local",
+        "test_ai_recommend_cross_brand_gpu_expansion_coverage",
+        "test_ai_recommend_message_length_boundary_rejected_before_handler",
+        "test_controlled_lifecycle_enums_and_structured_public_badges",
+        "test_unknown_lifecycle_or_business_tag_is_422_and_patch_is_atomic",
+        "test_eos_eol_are_searchable_and_detail_visible_but_excluded_from_ai_candidates",
+        "test_legacy_model_without_evidence_remains_unknown_without_lifecycle_badge",
+        "test_omitted_lifecycle_is_unknown_without_public_lifecycle_badge_and_ai_can_consider_it",
+        "test_explicit_null_lifecycle_is_422_with_zero_create_or_patch_writes",
+        "test_explicit_compatible_gpu_save_contract"
+      ]
+    },
+    {
+      "file": "backend/tests/test_field_dictionary_governance.py",
+      "lines": 98,
+      "classes": [],
+      "functions": [
+        "fixture_db",
+        "spec",
+        "test_unknown_or_raw_reference_is_422_before_write",
+        "test_known_field_uses_definition_metadata_without_mutation",
+        "test_legacy_raw_requires_existing_binding",
+        "test_existing_upsert_may_update_bound_raw_but_not_bind_it_to_another_model",
+        "test_schema_rejects_blank_field_key",
+        "test_migration_contract_matches_xiucai_audit"
+      ]
+    },
+    {
+      "file": "backend/tests/test_gpu_constraints_cleanup.py",
+      "lines": 196,
+      "classes": [],
+      "functions": [
+        "test_model_compatible_gpu_rejects_self_reference",
+        "test_postgres_migration_has_cross_table_and_lifecycle_guards",
+        "test_cleanup_allowlist_preserves_formal_unused_fields",
+        "private_data_migration_omitted_0006_guards_gpu_relation_parents_and_scopes_whitepaper_cleanup",
+        "private_data_migration_omitted_0007_nf5468a7_cleanup_is_evidence_bounded",
+        "private_data_migration_omitted_0007_contract_never_infers_amd_replacements",
+        "private_data_migration_omitted_0008_nf5468a7_chinese_cpu_notes_cleanup_is_strictly_bounded",
+        "private_data_migration_omitted_0008_contract_only_deletes_cpu_notes_and_never_infers_amd"
+      ]
+    },
+    {
+      "file": "backend/tests/test_lifecycle_migration_contract.py",
+      "lines": 17,
+      "classes": [],
+      "functions": [
+        "test_public_lifecycle_migration_is_schema_only"
+      ]
+    },
+    {
+      "file": "backend/tests/test_public_schema_only_migrations.py",
+      "lines": 21,
+      "classes": [],
+      "functions": [
+        "test_public_data_only_revisions_are_documented_noops"
+      ]
+    },
+    {
+      "file": "backend/tests/test_validation_error_redaction.py",
+      "lines": 102,
+      "classes": [
+        "ValidationProbe"
+      ],
+      "functions": [
+        "validation_probe",
+        "_assert_sanitized_422",
+        "test_ai_message_2001_characters_is_rejected_without_echo",
+        "test_body_field_type_error_does_not_echo_customer_value",
+        "test_missing_body_fields_keep_understandable_locations_without_echo",
+        "test_invalid_json_does_not_echo_raw_body_fragment"
+      ]
+    },
+    {
+      "file": "tools/tenspur_source_inventory.py",
+      "lines": 136,
+      "classes": [],
+      "functions": [
+        "rel",
+        "safe_text",
+        "files",
+        "version_data",
+        "route_data",
+        "vue_data",
+        "migrations",
+        "compose_data",
+        "py_symbols",
+        "tree_lines",
+        "main"
+      ]
+    },
+    {
+      "file": "tools/verify_handover_docs.py",
+      "lines": 32,
+      "classes": [],
+      "functions": []
+    }
+  ],
+  "fastapi_routes": [
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "POST",
+      "declared_path": "/auth/login",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/auth/login",
+      "function": "admin_login",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "GET",
+      "declared_path": "/auth/nginx",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/auth/nginx",
+      "function": "admin_nginx_auth",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "GET",
+      "declared_path": "/auth/me",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/auth/me",
+      "function": "admin_me",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "POST",
+      "declared_path": "/auth/logout",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/auth/logout",
+      "function": "admin_logout",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "GET",
+      "declared_path": "/spec-groups",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/spec-groups",
+      "function": "admin_spec_groups",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "GET",
+      "declared_path": "/spec-definitions",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/spec-definitions",
+      "function": "admin_spec_definitions",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "PATCH",
+      "declared_path": "/spec-definitions/{spec_id}",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/spec-definitions/{spec_id}",
+      "function": "admin_patch_spec_definition",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "DELETE",
+      "declared_path": "/series/{series_id}",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/series/{series_id}",
+      "function": "admin_delete_series",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "GET",
+      "declared_path": "/models",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/models",
+      "function": "admin_models",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "GET",
+      "declared_path": "/models/{model_id}",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/models/{model_id}",
+      "function": "admin_model_detail",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "POST",
+      "declared_path": "/spec-recognition/preview",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/spec-recognition/preview",
+      "function": "admin_spec_recognition_preview",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "GET",
+      "declared_path": "/import/template",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/import/template",
+      "function": "admin_import_template",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "POST",
+      "declared_path": "/import/preview",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/import/preview",
+      "function": "admin_import_preview",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "POST",
+      "declared_path": "/import/run",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/import/run",
+      "function": "admin_import_run",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "POST",
+      "declared_path": "/import/markdown/preview",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/import/markdown/preview",
+      "function": "admin_markdown_import_preview",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "POST",
+      "declared_path": "/import/markdown/run",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/import/markdown/run",
+      "function": "admin_markdown_import_run",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "POST",
+      "declared_path": "/models",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/models",
+      "function": "admin_create",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "PATCH",
+      "declared_path": "/models/{model_id}",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/models/{model_id}",
+      "function": "admin_patch",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "PUT",
+      "declared_path": "/models/{model_id}/compatible-gpus",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/models/{model_id}/compatible-gpus",
+      "function": "admin_replace_compatible_gpus",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "DELETE",
+      "declared_path": "/models/{model_id}",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/models/{model_id}",
+      "function": "admin_delete",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "PUT",
+      "declared_path": "/models/{model_id}/specifications",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/models/{model_id}/specifications",
+      "function": "admin_put_specs",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "POST",
+      "declared_path": "/models/upsert",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/models/upsert",
+      "function": "admin_upsert",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "GET",
+      "declared_path": "/gpu-options",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/gpu-options",
+      "function": "admin_gpu_options",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "GET",
+      "declared_path": "/ai-config",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/ai-config",
+      "function": "admin_ai_config",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "PUT",
+      "declared_path": "/ai-config",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/ai-config",
+      "function": "admin_put_ai_config",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "DELETE",
+      "declared_path": "/ai-config/api-key",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/ai-config/api-key",
+      "function": "admin_delete_ai_config_api_key",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "POST",
+      "declared_path": "/ai-config/test",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/ai-config/test",
+      "function": "admin_test_ai_config",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "GET",
+      "declared_path": "/ai-agent-rule",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/ai-agent-rule",
+      "function": "admin_ai_agent_rule",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/admin.py",
+      "router": "router",
+      "method": "PUT",
+      "declared_path": "/ai-agent-rule",
+      "router_prefix": "/api/v1/admin",
+      "path": "/api/v1/admin/ai-agent-rule",
+      "function": "admin_put_ai_agent_rule",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/public.py",
+      "router": "router",
+      "method": "GET",
+      "declared_path": "/health",
+      "router_prefix": "/api/v1",
+      "path": "/api/v1/health",
+      "function": "health",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/public.py",
+      "router": "router",
+      "method": "GET",
+      "declared_path": "/brands",
+      "router_prefix": "/api/v1",
+      "path": "/api/v1/brands",
+      "function": "brands",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/public.py",
+      "router": "router",
+      "method": "GET",
+      "declared_path": "/product-types",
+      "router_prefix": "/api/v1",
+      "path": "/api/v1/product-types",
+      "function": "product_types",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/public.py",
+      "router": "router",
+      "method": "GET",
+      "declared_path": "/spec-definitions",
+      "router_prefix": "/api/v1",
+      "path": "/api/v1/spec-definitions",
+      "function": "spec_definitions",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/public.py",
+      "router": "router",
+      "method": "GET",
+      "declared_path": "/series",
+      "router_prefix": "/api/v1",
+      "path": "/api/v1/series",
+      "function": "series",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/public.py",
+      "router": "router",
+      "method": "GET",
+      "declared_path": "/models",
+      "router_prefix": "/api/v1",
+      "path": "/api/v1/models",
+      "function": "models",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/public.py",
+      "router": "router",
+      "method": "GET",
+      "declared_path": "/models/{model_id}",
+      "router_prefix": "/api/v1",
+      "path": "/api/v1/models/{model_id}",
+      "function": "model_detail",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/public.py",
+      "router": "router",
+      "method": "GET",
+      "declared_path": "/models/{model_id}/specifications",
+      "router_prefix": "/api/v1",
+      "path": "/api/v1/models/{model_id}/specifications",
+      "function": "model_specifications",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/public.py",
+      "router": "router",
+      "method": "GET",
+      "declared_path": "/search",
+      "router_prefix": "/api/v1",
+      "path": "/api/v1/search",
+      "function": "search",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/public.py",
+      "router": "router",
+      "method": "GET",
+      "declared_path": "/cpu-compatibility/summary",
+      "router_prefix": "/api/v1",
+      "path": "/api/v1/cpu-compatibility/summary",
+      "function": "cpu_compatibility_summary",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/public.py",
+      "router": "router",
+      "method": "GET",
+      "declared_path": "/cpu-compatibility",
+      "router_prefix": "/api/v1",
+      "path": "/api/v1/cpu-compatibility",
+      "function": "cpu_compatibility",
+      "dependencies": []
+    },
+    {
+      "file": "backend/app/routes/public.py",
+      "router": "router",
+      "method": "POST",
+      "declared_path": "/ai/recommend",
+      "router_prefix": "/api/v1",
+      "path": "/api/v1/ai/recommend",
+      "function": "ai_recommend",
+      "dependencies": []
+    },
+    {
+      "file": "backend/tests/test_validation_error_redaction.py",
+      "router": "router",
+      "method": "POST",
+      "declared_path": "/validation-probe",
+      "router_prefix": "",
+      "path": "/validation-probe",
+      "function": "validation_probe",
+      "dependencies": []
+    }
+  ],
+  "vue_components": [
+    {
+      "file": "frontend/src/App.vue",
+      "name": "App",
+      "lines": 467,
+      "props": [],
+      "events": [],
+      "state": [
+        "brandOptions",
+        "browseScrollY",
+        "catalogLoading",
+        "collapsedSeries",
+        "collapsedTypes",
+        "compareBusy",
+        "compareOnlyDiff",
+        "compareOpen",
+        "compareRowsFiltered",
+        "currentBrandName",
+        "currentCount",
+        "detailLoading",
+        "filteredModels",
+        "groupedSpecs",
+        "isMobileViewport",
+        "keyword",
+        "mobileNavigatorOpen",
+        "mobileOverlayOpen",
+        "navigationGroups",
+        "pageProductTitle",
+        "selectedBrand",
+        "selectedType",
+        "selectionNotesText",
+        "summaryCards",
+        "suppressBrandWatch",
+        "suppressKeywordWatch",
+        "typeFilteredModels",
+        "typeFilters"
+      ],
+      "vue_imports": [
+        {
+          "name": "AiAssistant",
+          "from": "./components/AiAssistant.vue"
+        },
+        {
+          "name": "BrandHeader",
+          "from": "./components/BrandHeader.vue"
+        },
+        {
+          "name": "ModelDetailView",
+          "from": "./components/ModelDetail.vue"
+        },
+        {
+          "name": "ModelNavigator",
+          "from": "./components/ModelNavigator.vue"
+        },
+        {
+          "name": "ProductCompare",
+          "from": "./components/ProductCompare.vue"
+        }
+      ],
+      "media_queries": []
+    },
+    {
+      "file": "frontend/src/admin/AdminApp.vue",
+      "name": "AdminApp",
+      "lines": 1328,
+      "props": [],
+      "events": [],
+      "state": [
+        "adminToken",
+        "adminUser",
+        "aiAgentRuleOpen",
+        "aiConfigBusy",
+        "aiConfigDeleting",
+        "aiConfigHasKey",
+        "aiConfigOpen",
+        "aiConfigTesting",
+        "basicForm",
+        "canWrite",
+        "compatibleGpusDirty",
+        "creating",
+        "filteredModels",
+        "formSeriesBrand",
+        "formSeriesLoading",
+        "formSeriesMessage",
+        "formSeriesOptions",
+        "formSeriesPlaceholder",
+        "hasApiKey",
+        "importBusy",
+        "isDeletedDetail",
+        "isGpuAccessoryDetail",
+        "isLoggedIn",
+        "keyword",
+        "loading",
+        "loginForm",
+        "markdownImportText",
+        "newSeriesName",
+        "notice",
+        "productTypes",
+        "recognitionMessage",
+        "recognitionText",
+        "recognizingSpecs",
+        "savingBasic",
+        "savingCompatibleGpus",
+        "savingSpecs",
+        "selectedBrand",
+        "selectedFormBrand",
+        "selectedFormSeries",
+        "selectedSeries",
+        "selectedType",
+        "seriesOptions",
+        "sortedSpecDefinitions",
+        "storagePreviewSpec",
+        "storagePreviewText"
+      ],
+      "vue_imports": [
+        {
+          "name": "AdminAiAgentRulePanel",
+          "from": "./components/AdminAiAgentRulePanel.vue"
+        },
+        {
+          "name": "AdminAiConfigPanel",
+          "from": "./components/AdminAiConfigPanel.vue"
+        },
+        {
+          "name": "AdminBasicForm",
+          "from": "./components/AdminBasicForm.vue"
+        },
+        {
+          "name": "AdminCompatibleGpuPanel",
+          "from": "./components/AdminCompatibleGpuPanel.vue"
+        },
+        {
+          "name": "AdminImportPanel",
+          "from": "./components/AdminImportPanel.vue"
+        },
+        {
+          "name": "AdminModelList",
+          "from": "./components/AdminModelList.vue"
+        },
+        {
+          "name": "AdminRecognitionPanel",
+          "from": "./components/AdminRecognitionPanel.vue"
+        },
+        {
+          "name": "AdminSpecEditor",
+          "from": "./components/AdminSpecEditor.vue"
+        }
+      ],
+      "media_queries": []
+    },
+    {
+      "file": "frontend/src/admin/components/AdminAiAgentRulePanel.vue",
+      "name": "AdminAiAgentRulePanel",
+      "lines": 156,
+      "props": [],
+      "events": [
+        "saved"
+      ],
+      "state": [
+        "canSave",
+        "content",
+        "dirty",
+        "editorFullscreen",
+        "formattedUpdatedAt",
+        "isCompact",
+        "loading",
+        "message",
+        "saving",
+        "serverContent"
+      ],
+      "vue_imports": [],
+      "media_queries": []
+    },
+    {
+      "file": "frontend/src/admin/components/AdminAiConfigPanel.vue",
+      "name": "AdminAiConfigPanel",
+      "lines": 59,
+      "props": [
+        "busy",
+        "deleting",
+        "form",
+        "hasApiKey",
+        "testing"
+      ],
+      "events": [
+        "deleteKey",
+        "save",
+        "test"
+      ],
+      "state": [],
+      "vue_imports": [],
+      "media_queries": []
+    },
+    {
+      "file": "frontend/src/admin/components/AdminBasicForm.vue",
+      "name": "AdminBasicForm",
+      "lines": 116,
+      "props": [
+        "basicForm",
+        "brands",
+        "creating",
+        "detailModelName",
+        "formSeriesLoading",
+        "formSeriesMessage",
+        "formSeriesOptions",
+        "formSeriesPlaceholder",
+        "hasApiKey",
+        "isDeletedDetail",
+        "newSeriesName",
+        "productTypeOptions",
+        "savingBasic",
+        "selectedFormSeries"
+      ],
+      "events": [
+        "remove-current",
+        "remove-selected-series",
+        "save-basic",
+        "update:newSeriesName"
+      ],
+      "state": [
+        "newSeriesNameProxy"
+      ],
+      "vue_imports": [
+        {
+          "name": "SeriesSelector",
+          "from": "./SeriesSelector.vue"
+        }
+      ],
+      "media_queries": []
+    },
+    {
+      "file": "frontend/src/admin/components/AdminCompatibleGpuPanel.vue",
+      "name": "AdminCompatibleGpuPanel",
+      "lines": 77,
+      "props": [
+        "dirty",
+        "disabled",
+        "gpuOptions",
+        "saving",
+        "selectedIds"
+      ],
+      "events": [
+        "save",
+        "update:selectedIds"
+      ],
+      "state": [
+        "filteredOptions",
+        "gpuExpanded",
+        "isCompact",
+        "keyword",
+        "visibleOptions"
+      ],
+      "vue_imports": [],
+      "media_queries": []
+    },
+    {
+      "file": "frontend/src/admin/components/AdminImportPanel.vue",
+      "name": "AdminImportPanel",
+      "lines": 170,
+      "props": [
+        "importBusy",
+        "importFile",
+        "importPreview",
+        "markdownText"
+      ],
+      "events": [
+        "clear-preview",
+        "download-template",
+        "preview-import",
+        "preview-markdown",
+        "run-import",
+        "run-markdown",
+        "update:importFile",
+        "update:markdownText"
+      ],
+      "state": [
+        "isCompact",
+        "markdownFullscreen"
+      ],
+      "vue_imports": [],
+      "media_queries": []
+    },
+    {
+      "file": "frontend/src/admin/components/AdminModelList.vue",
+      "name": "AdminModelList",
+      "lines": 151,
+      "props": [
+        "brands",
+        "creating",
+        "detailId",
+        "filteredModels",
+        "keyword",
+        "loading",
+        "productTypes",
+        "selectedBrand",
+        "selectedSeries",
+        "selectedType",
+        "seriesOptions",
+        "statusFilter"
+      ],
+      "events": [
+        "active",
+        "all",
+        "deleted",
+        "refresh",
+        "select-model",
+        "start-create",
+        "update:keyword",
+        "update:selectedBrand",
+        "update:selectedSeries",
+        "update:selectedType",
+        "update:statusFilter"
+      ],
+      "state": [
+        "canCollapseModels",
+        "currentModel",
+        "hasMoreModels",
+        "isResponsive",
+        "navigatorOpen",
+        "visibleCount",
+        "visibleModels"
+      ],
+      "vue_imports": [
+        {
+          "name": "ProductBadges",
+          "from": "../../components/ProductBadges.vue"
+        }
+      ],
+      "media_queries": []
+    },
+    {
+      "file": "frontend/src/admin/components/AdminRecognitionPanel.vue",
+      "name": "AdminRecognitionPanel",
+      "lines": 73,
+      "props": [
+        "creating",
+        "definitionOptionLabel",
+        "isDeletedDetail",
+        "recognitionMessage",
+        "recognitionText",
+        "recognizedSpecs",
+        "recognizingSpecs",
+        "sortedSpecDefinitions",
+        "visible"
+      ],
+      "events": [
+        "apply",
+        "recognize",
+        "recognized-field-change",
+        "update:recognitionText"
+      ],
+      "state": [],
+      "vue_imports": [],
+      "media_queries": []
+    },
+    {
+      "file": "frontend/src/admin/components/AdminSpecEditor.vue",
+      "name": "AdminSpecEditor",
+      "lines": 78,
+      "props": [
+        "creating",
+        "hasApiKey",
+        "isDeletedDetail",
+        "savingSpecs",
+        "specDefinitionOptionsFor",
+        "specsForm",
+        "storagePreviewText"
+      ],
+      "events": [
+        "add-spec",
+        "definition-change",
+        "remove-spec",
+        "save-specs"
+      ],
+      "state": [],
+      "vue_imports": [
+        {
+          "name": "SpecRows",
+          "from": "./SpecRows.vue"
+        }
+      ],
+      "media_queries": []
+    },
+    {
+      "file": "frontend/src/admin/components/SeriesSelector.vue",
+      "name": "SeriesSelector",
+      "lines": 68,
+      "props": [
+        "basicForm",
+        "creating",
+        "formSeriesLoading",
+        "formSeriesMessage",
+        "formSeriesOptions",
+        "formSeriesPlaceholder",
+        "hasApiKey",
+        "newSeriesName",
+        "selectedFormSeries"
+      ],
+      "events": [
+        "remove-selected-series",
+        "update:newSeriesName"
+      ],
+      "state": [
+        "disabled",
+        "newSeriesNameProxy",
+        "seriesSelectRequired"
+      ],
+      "vue_imports": [],
+      "media_queries": []
+    },
+    {
+      "file": "frontend/src/admin/components/SpecRows.vue",
+      "name": "SpecRows",
+      "lines": 55,
+      "props": [
+        "showAdvanced",
+        "specDefinitionOptionsFor",
+        "specsForm"
+      ],
+      "events": [
+        "definition-change",
+        "remove-spec"
+      ],
+      "state": [],
+      "vue_imports": [],
+      "media_queries": []
+    },
+    {
+      "file": "frontend/src/components/AiAssistant.vue",
+      "name": "AiAssistant",
+      "lines": 195,
+      "props": [],
+      "events": [
+        "jump-model",
+        "open-change"
+      ],
+      "state": [
+        "busy",
+        "input",
+        "open"
+      ],
+      "vue_imports": [
+        {
+          "name": "ProductBadges",
+          "from": "./ProductBadges.vue"
+        }
+      ],
+      "media_queries": []
+    },
+    {
+      "file": "frontend/src/components/BrandHeader.vue",
+      "name": "BrandHeader",
+      "lines": 39,
+      "props": [
+        "brandOptions",
+        "currentBrandName",
+        "currentCount",
+        "pageProductTitle",
+        "selectedBrand"
+      ],
+      "events": [
+        "update:selectedBrand"
+      ],
+      "state": [],
+      "vue_imports": [],
+      "media_queries": []
+    },
+    {
+      "file": "frontend/src/components/ModelDetail.vue",
+      "name": "ModelDetail",
+      "lines": 130,
+      "props": [
+        "detail",
+        "groupedSpecs",
+        "isCompareSelected",
+        "loading",
+        "selectionNotesText",
+        "summaryCards"
+      ],
+      "events": [
+        "jump-model",
+        "refresh-detail",
+        "toggle-compare"
+      ],
+      "state": [
+        "collapsedGroups"
+      ],
+      "vue_imports": [
+        {
+          "name": "ProductBadges",
+          "from": "./ProductBadges.vue"
+        }
+      ],
+      "media_queries": []
+    },
+    {
+      "file": "frontend/src/components/ModelNavigator.vue",
+      "name": "ModelNavigator",
+      "lines": 102,
+      "props": [
+        "isTypeOpen",
+        "keyword",
+        "loading",
+        "navigationGroups",
+        "selectedModelId",
+        "selectedType",
+        "typeFilters"
+      ],
+      "events": [
+        "select-model",
+        "select-type",
+        "toggle-series",
+        "toggle-type",
+        "update:keyword"
+      ],
+      "state": [],
+      "vue_imports": [
+        {
+          "name": "ProductBadges",
+          "from": "./ProductBadges.vue"
+        }
+      ],
+      "media_queries": []
+    },
+    {
+      "file": "frontend/src/components/ProductBadges.vue",
+      "name": "ProductBadges",
+      "lines": 12,
+      "props": [],
+      "events": [],
+      "state": [
+        "items"
+      ],
+      "vue_imports": [],
+      "media_queries": []
+    },
+    {
+      "file": "frontend/src/components/ProductCompare.vue",
+      "name": "ProductCompare",
+      "lines": 156,
+      "props": [
+        "compareBusy",
+        "compareDetails",
+        "compareIds",
+        "compareOnlyDiff",
+        "compareOpen",
+        "compareRowsFiltered"
+      ],
+      "events": [
+        "clear",
+        "close",
+        "open",
+        "remove",
+        "update:compareOnlyDiff"
+      ],
+      "state": [],
+      "vue_imports": [
+        {
+          "name": "ProductBadges",
+          "from": "./ProductBadges.vue"
+        }
+      ],
+      "media_queries": []
+    }
+  ],
+  "migrations": [
+    {
+      "file": "backend/alembic/versions/0001_initial_schema.py",
+      "revision": "0001_initial_schema",
+      "down_revision": null,
+      "title": "Revision ID: 0001_initial_schema"
+    },
+    {
+      "file": "backend/alembic/versions/0002_cpu_compatibility.py",
+      "revision": "0002_cpu_compatibility",
+      "down_revision": "0001_initial_schema",
+      "title": "Revision ID: 0002_cpu_compatibility"
+    },
+    {
+      "file": "backend/alembic/versions/0003_gpu_slot_cooling.py",
+      "revision": "0003_gpu_slot_cooling",
+      "down_revision": "0002_cpu_compatibility",
+      "title": "Revision ID: 0003_gpu_slot_cooling"
+    },
+    {
+      "file": "backend/alembic/versions/0004_ai_config_compatible_gpu.py",
+      "revision": "0004_ai_config_compatible_gpu",
+      "down_revision": "0003_gpu_slot_cooling",
+      "title": "Revision ID: 0004_ai_config_compatible_gpu"
+    },
+    {
+      "file": "backend/alembic/versions/0005_gpu_relation_constraints_acceptance_cleanup.py",
+      "revision": "0005_gpu_rel_cleanup",
+      "down_revision": "0004_ai_config_compatible_gpu",
+      "title": "Revision ID: 0005_gpu_rel_cleanup"
+    },
+    {
+      "file": "backend/alembic/versions/0006_gpu_parent_guard_import_trim_whitepaper.py",
+      "revision": "0006_gpu_parent_guard_import_trim_whitepaper",
+      "down_revision": "0005_gpu_relation_constraints_acceptance_cleanup",
+      "title": "The private deployment used this revision for product-record correction. Public"
+    },
+    {
+      "file": "backend/alembic/versions/0007_nf5468a7_cross_platform_cleanup.py",
+      "revision": "0007_nf5468a7_cross_platform_cleanup",
+      "down_revision": "0006_gpu_parent_guard_import_trim_whitepaper",
+      "title": "The private deployment used this revision for product-record correction. Public"
+    },
+    {
+      "file": "backend/alembic/versions/0008_nf5468a7_cn_cpu_notes_cleanup.py",
+      "revision": "0008_nf5468a7_cn_cpu_notes_cleanup",
+      "down_revision": "0007_nf5468a7_cross_platform_cleanup",
+      "title": "The private deployment used this revision for product-record correction. Public"
+    },
+    {
+      "file": "backend/alembic/versions/0009_controlled_lifecycle_tags.py",
+      "revision": "0009_controlled_lifecycle_tags",
+      "down_revision": "0008_nf5468a7_cn_notes",
+      "title": "Revision ID: 0009_controlled_lifecycle_tags"
+    },
+    {
+      "file": "backend/alembic/versions/0010_field_dictionary_guard.py",
+      "revision": "0010_field_dictionary_guard",
+      "down_revision": "0009_controlled_lifecycle_tags",
+      "title": "Revision ID: 0010_field_dictionary_guard"
+    },
+    {
+      "file": "backend/alembic/versions/0011_merge_auto_field_definitions.py",
+      "revision": "0011_merge_auto_fields",
+      "down_revision": "0010_field_dictionary_guard",
+      "title": "The private deployment merged fixed production dictionary rows. Public source"
+    },
+    {
+      "file": "backend/alembic/versions/0012_normalize_interface_fields.py",
+      "revision": "0012_normalize_interface_fields",
+      "down_revision": "0011_merge_auto_fields",
+      "title": "The private deployment normalized fixed production dictionary rows. Public source"
+    }
+  ],
+  "compose": [
+    {
+      "file": "docker-compose.yml",
+      "services": [
+        {
+          "name": "db",
+          "image": "postgres:16",
+          "build": null,
+          "ports": [],
+          "volumes": [
+            "db-data:/var/lib/postgresql/data"
+          ],
+          "networks": []
+        },
+        {
+          "name": "api",
+          "image": null,
+          "build": "./backend",
+          "ports": [],
+          "volumes": [],
+          "networks": []
+        },
+        {
+          "name": "web",
+          "image": null,
+          "build": "./frontend",
+          "ports": [
+            "8080:80"
+          ],
+          "volumes": [],
+          "networks": []
+        }
+      ],
+      "volumes": [
+        "db-data"
+      ],
+      "networks": []
+    }
+  ],
+  "summary": {
+    "source_files": 112,
+    "python_files": 39,
+    "ts_files": 25,
+    "vue_files": 18,
+    "routes": 42,
+    "components": 18,
+    "migrations": 12,
+    "compose_services": 3
+  }
+}
