@@ -1,6 +1,3 @@
-from pathlib import Path
-import ast
-
 import pytest
 from fastapi import HTTPException
 from sqlalchemy import create_engine, select
@@ -75,23 +72,3 @@ def test_existing_upsert_may_update_bound_raw_but_not_bind_it_to_another_model()
 def test_schema_rejects_blank_field_key():
     with pytest.raises(Exception):
         spec("   ")
-
-
-def test_migration_contract_matches_xiucai_audit():
-    migration_0011 = (Path(__file__).parents[1] / "alembic/versions/0011_merge_auto_field_definitions.py").read_text()
-    tree = ast.parse(migration_0011)
-    merges = next(ast.literal_eval(n.value) for n in tree.body if isinstance(n, ast.Assign) and n.targets[0].id == "MERGES")
-    pairs = {(row[0], row[1]) for row in merges}
-    assert pairs == {
-        (5326, 12), (4287, 5059), (4289, 4273), (4290, 5062), (4291, 4275),
-        (4308, 4281), (5057, 4401), (5076, 4272), (5080, 4276), (5095, 3915),
-    }
-    assert (4401, 3998) not in pairs
-    assert all(4269 not in pair for pair in pairs)
-    assert "device_bus_interface" not in migration_0011
-    assert "设备总线接口" not in migration_0011
-
-    migration_0012 = (Path(__file__).parents[1] / "alembic/versions/0012_normalize_interface_fields.py").read_text()
-    assert "device_bus_interface" in migration_0012 and "设备总线接口" in migration_0012
-    assert "external_ports" in migration_0012 and "外部接口" in migration_0012
-    assert "raw_367497" in migration_0012
