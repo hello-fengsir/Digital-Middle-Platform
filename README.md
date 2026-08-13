@@ -1,8 +1,8 @@
-# 天枢 TenSpur — 硬件产品资料与选型平台
+# 天枢 TenSpur — 企业产品库
 
-> 天枢 TenSpur 是一个面向服务器、工作站、存储与 GPU 等硬件产品的硬件产品资料与选型平台。
+> 面向企业的产品资料管理、分类检索、产品对比与辅助选型平台，支持软件、硬件及其他产品类型的统一管理。
 >
-> **English summary:** A sanitized, self-hosted hardware catalog and selection platform with a public catalog, model comparison, authenticated administration, governed imports, GPU compatibility, and optional evidence-bounded AI assistance.
+> **English summary:** A sanitized, self-hosted enterprise product catalog for unified software, hardware, and other product types, with public browsing, comparison, authenticated administration, governed imports, and optional evidence-bounded AI assistance.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Vue](https://img.shields.io/badge/Vue-3.4.38-42b883.svg)](frontend/package.json)
@@ -11,11 +11,11 @@
 
 ## 项目定位与适用场景
 
-天枢 TenSpur 是一个可自托管的硬件产品资料与选型平台。仓库名 `Digital-Middle-Platform` 以及源码内部 `hardware-product-library-*` 技术包名为兼容性保留标识，不作为用户可见产品名。它将“对外可浏览的产品目录”和“对内受认证的数据维护后台”放在同一套数据模型与 API 之上，并提供字段字典、结构化导入、兼容关系和可选 AI 选型能力。
+天枢 TenSpur 是一个可自托管的企业产品库：面向企业的产品资料管理、分类检索、产品对比与辅助选型平台，支持软件、硬件及其他产品类型的统一管理。仓库名 `Digital-Middle-Platform` 以及源码内部 `hardware-product-library-*` 技术包名、数据库迁移和代码类名中的 `hardware` 等均为历史技术标识，为兼容性保留，不代表产品边界，也不作为用户可见产品名。平台将“对外可浏览的产品目录”和“对内受认证的数据维护后台”放在同一套数据模型与 API 之上，并提供字段字典、结构化导入、兼容关系和可选 AI 选型能力。
 
 适合：
 
-- 建立服务器、工作站、存储、GPU 等产品的统一规格目录；
+- 建立软件、服务器、工作站、存储、GPU 及其他产品的统一资料目录；
 - 为售前、方案、渠道或研发团队提供型号检索、详情和横向比较；
 - 将 Excel、Markdown 或粘贴文本逐步治理为结构化规格；
 - 维护生命周期、业务标签、GPU 附件兼容关系与来源证据；

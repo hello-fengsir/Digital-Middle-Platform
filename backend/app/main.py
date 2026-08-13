@@ -35,7 +35,7 @@ async def request_validation_exception_handler(
 
 
 def create_app() -> FastAPI:
-    app = FastAPI(title="天枢 TenSpur API", description="硬件产品资料与选型平台")
+    app = FastAPI(title="天枢 TenSpur API", description="企业产品库")
     app.add_exception_handler(RequestValidationError, request_validation_exception_handler)
     app.add_middleware(
         CORSMiddleware,

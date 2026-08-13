@@ -4,7 +4,7 @@
       <div class="header-main">
         <h1><span class="red">天枢 TenSpur</span> · {{ currentBrandName }} · {{ pageProductTitle }}</h1>
         <div class="sub">
-          硬件产品资料与选型平台
+          企业产品库
           <span class="summary-pill">{{ currentCount }} 款产品 · 实时读取</span>
         </div>
       </div>

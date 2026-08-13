@@ -5,8 +5,8 @@
         <div class="admin-brand-mark text-brand" aria-label="天枢 TenSpur">TS</div>
         <div class="admin-brand-copy">
           <p class="admin-kicker">天枢 TenSpur</p>
-          <h1>硬件产品资料与选型平台</h1>
-          <p class="admin-subtitle">产品型号、基础信息、规格参数与模板导入统一维护</p>
+          <h1>企业产品库</h1>
+          <p class="admin-subtitle">软件、硬件及其他产品的资料、分类与模板导入统一维护</p>
         </div>
       </div>
       <div v-if="isLoggedIn" class="key-box session-box">
